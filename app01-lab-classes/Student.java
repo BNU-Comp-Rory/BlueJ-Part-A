@@ -21,6 +21,8 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
+    // the course assigned to the student 
+    private String course;
     
     /**
      * Create a new student with a given name and ID number.
@@ -92,12 +94,21 @@ public class Student
         + credits );
     }
 
+    /** Add a Course to this student.
+     * 
+     */
+    //public void selectcourse (Course NewCourse)
+    //    {
+    //        course.(NewCourse);
+    //    }
+}
+    
     /**
      * Add a Course to this student, if enrolled.
      */
     //public void selectcourse(Course newCourse)
     //{
-    //    if(LabClass.Arraylist<Student>() -> fullName) 
+    //    if(LabClass.Arraylist<Student>(Object[] elementData() == null) 
     //    {
     //        System.out.println("The student has not enrolled in class");
     //    }
@@ -106,4 +117,4 @@ public class Student
     //        students.add(newCourse);
     //    }
     //}
-}
+//}
