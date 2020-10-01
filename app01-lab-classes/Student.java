@@ -6,6 +6,12 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
+ * 
+ * Modified by Rory Guilfoyle
+ * 01.10.2020
+ * Modifications, Work in progress
+ * Adding a method to add a course to the student
+ * Adding the course to the print list
  */
 public class Student
 {
@@ -82,6 +88,22 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + ", student ID: " + id + ", credits: " 
+        + credits );
     }
+
+    /**
+     * Add a Course to this student, if enrolled.
+     */
+    //public void selectcourse(Course newCourse)
+    //{
+    //    if(LabClass.Arraylist<Student>() -> fullName) 
+    //    {
+    //        System.out.println("The student has not enrolled in class");
+    //    }
+    //    else 
+    //    {
+    //        students.add(newCourse);
+    //    }
+    //}
 }

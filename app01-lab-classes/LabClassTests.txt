@@ -1,0 +1,40 @@
+Student student1 = new Student("Rory", "1234");
+Student student2 = new Student("Elle", "4321");
+co452Lab.printList();
+Lab class unknown
+Instructor: unknown   Room: unknown
+Class list:
+Number of students: 0
+Student student3 = new Student("Harrison", "9876");
+Student student4 = new Student("Charlotte", "6789");
+co452Lab.printList();
+Lab class unknown
+Instructor: Nicholas Day   Room: unknown
+Class list:
+Number of students: 0
+co452Lab.printList();
+Lab class Tuesday, 29th September
+Instructor: Nicholas Day   Room: G100
+Class list:
+Number of students: 0
+student1.addCredits(20);
+Lab class Tuesday, 29th September
+Instructor: Nicholas Day   Room: G100
+Class list:
+Number of students: 0
+co452Lab.enrollStudent(student1);
+The class is full, you cannot enrol.
+Lab class Tuesday, 29th September
+Instructor: Nicholas Day   Room: G100
+Class list:
+Rory, student ID: 1234, credits: 20
+Harrison, student ID: 9876, credits: 24
+Charlotte, student ID: 6789, credits: 21
+Number of students: 3
+Lab class Tuesday, 29th September
+Instructor: Nicholas Day   Room: G100
+Class list:
+Lee, student ID: 1234, credits: 20
+Harrison, student ID: 9876, credits: 24
+Charlotte, student ID: 6789, credits: 21
+Number of students: 3
