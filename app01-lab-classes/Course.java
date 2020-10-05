@@ -7,16 +7,17 @@
  */
 public class Course
 {
-    private String title;
+    public String title;
     
-    private String courseCode;
+    public String courseCode;
 
      /**
      * Set the title for this Course.
      */
-    public void setTitle(String title)
+    public Course (String courseCode, String title)
     {
-        title = title;
+        this.courseCode = courseCode;
+        this.title = title;
     }
     
     /**
@@ -26,4 +27,12 @@ public class Course
     {
         courseCode = courseCode;
     }
+    
+    /**
+     *
+     */
+     public String toString () 
+     {
+      return courseCode + " " + title ;
+     }
 }
