@@ -12,6 +12,11 @@ import java.util.*;
  * Modifications, Work in progress
  * Adding a method to add a course to the student
  * Adding the course to the print list
+ * 
+ * 05.10.2020
+ * Modifications
+ * Added enrol on the the course
+ * Added course to print list
  */
 public class Student
 {
@@ -22,7 +27,7 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     // the course assigned to the student 
-    private String course;
+    private Course course;
     
     /**
      * Create a new student with a given name and ID number.
@@ -91,16 +96,16 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " 
-        + credits );
+        + credits + ", course: " + course);
     }
 
     /** Add a Course to this student.
      * 
      */
-    //public void Enroll NewCourse (Course course)
-    //{
-    //        Student.add(newCourse);
-    //}
+    public void EnrolOnCourse(Course course)
+    {
+            this.course = course;
+    }
 }
     
     /**
@@ -108,7 +113,7 @@ public class Student
      * Add a Course to this student, if enrolled. To be worked on at a later date, as to advanced to learn
      * at the moment.
      */
-    //public void selectcourse(Course newCourse)
+    //public void EnrolOnCourse(Course course)
     //{
     //    if(LabClass.Arraylist<Student>(Object[] elementData() == null) 
     //    {
@@ -116,7 +121,7 @@ public class Student
     //    }
     //    else 
     //    {
-    //        students.add(newCourse);
+    //        this.course = course;
     //    }
     //}
     //}
