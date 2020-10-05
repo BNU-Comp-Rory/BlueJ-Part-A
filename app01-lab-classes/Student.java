@@ -27,7 +27,7 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     // the course assigned to the student 
-    private Course course;
+    public Course course;
     
     /**
      * Create a new student with a given name and ID number.
@@ -102,7 +102,7 @@ public class Student
     /** Add a Course to this student.
      * 
      */
-    public void EnrolOnCourse(Course course)
+    public void enrolOnCourse(Course course)
     {
             this.course = course;
     }
