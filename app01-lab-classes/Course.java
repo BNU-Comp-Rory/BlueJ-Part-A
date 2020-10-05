@@ -7,10 +7,8 @@
  */
 public class Course
 {
-    // instance variables - Created the title for course and course code
-    // the Course title
     private String title;
-    // the Course code 
+    
     private String courseCode;
 
      /**
