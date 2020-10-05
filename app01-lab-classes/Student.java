@@ -97,9 +97,9 @@ public class Student
     /** Add a Course to this student.
      * 
      */
-    //public void addnewCourse (Course newCourse)
+    //public void Enroll NewCourse (Course course)
     //{
-    //        Student .add (newCourse);
+    //        Student.add(newCourse);
     //}
 }
     
