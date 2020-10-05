@@ -97,14 +97,16 @@ public class Student
     /** Add a Course to this student.
      * 
      */
-    //public void selectcourse (Course NewCourse)
-    //    {
-    //        course.(NewCourse);
-    //    }
+    //public void addnewCourse (Course newCourse)
+    //{
+    //        Student .add (newCourse);
+    //}
 }
     
     /**
-     * Add a Course to this student, if enrolled.
+     * Attempt
+     * Add a Course to this student, if enrolled. To be worked on at a later date, as to advanced to learn
+     * at the moment.
      */
     //public void selectcourse(Course newCourse)
     //{
@@ -117,4 +119,5 @@ public class Student
     //        students.add(newCourse);
     //    }
     //}
-//}
+    //}
+
