@@ -1,33 +1,26 @@
 
 /**
- * Write a description of class Coin here.
+ * Enumeration class Coin - write a description of the enum class here
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (your name here)
+ * @version (version number or date here)
  */
-public class Coin
+public enum Coin
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Coin
-     */
-    public Coin()
+    P10 (10),
+    P20 (20),
+    P100 (100),
+    P200 (200);
+    
+    private final int value;
+    
+    private Coin(int value)
     {
-        // initialise instance variables
-        x = 0;
+        this.value = value;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    public int getValue()
     {
-        // put your code here
-        return x + y;
+        return value;
     }
 }
