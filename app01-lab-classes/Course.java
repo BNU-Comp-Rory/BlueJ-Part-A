@@ -7,12 +7,12 @@
  */
 public class Course
 {
-    public String title;
+   public String title;
     
-    public String courseCode;
+   public String courseCode;
 
-     /**
-     * Set the title for this Course.
+   /**
+      * Set the title for this Course.
      */
     public Course (String courseCode, String title)
     {
@@ -20,20 +20,12 @@ public class Course
         this.title = title;
     }
     
-    /**
-     * Set the code for this Course.
-     */
-    public void setCourseCode(String courseCode)
-    {
-        courseCode = courseCode;
-    }
-    
-    /**
+   /**
      * Returns the courseCode and title as a String
-     * used to enable the student print
+     * used to enable the student print method
      */
      public String toString () 
      {
-      return courseCode + " " + title ;
+      return courseCode + " - " + title;
      }
 }
