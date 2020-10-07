@@ -9,7 +9,8 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * @ Modified Rory Guilfoyle
+ * @ Modified 07.10.2020
  */
 public class TicketMachine
 {

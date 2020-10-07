@@ -1,22 +1,22 @@
 
 /**
- * Write a description of class Ticket here.
+ * Tickets and Prices to locations that the TicketMachine can print.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Author  Rory Guilfoyle
+ * @ Version 07.10.2020
  */
 public class Ticket
 {
     // instance variables - replace the example below with your own
-    private int x;
+    // public Get.location ;
 
     /**
      * Constructor for objects of class Ticket
      */
     public Ticket()
     {
-        // initialise instance variables
-        x = 0;
+        //initialise instance variables
+        
     }
 
     /**
@@ -25,9 +25,9 @@ public class Ticket
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    // public Get location ()
     {
         // put your code here
-        return x + y;
+       
     }
 }
