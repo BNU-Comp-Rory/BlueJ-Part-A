@@ -29,7 +29,8 @@ public class Course
     }
     
     /**
-     *
+     * Returns the courseCode and title as a String
+     * used to enable the student print
      */
      public String toString () 
      {
