@@ -1,19 +1,22 @@
 #BlueJ package file
+dependency1.from=TicketMachine
+dependency1.to=Ticket
+dependency1.type=UsesDependency
 editor.fx.0.height=722
 editor.fx.0.width=800
-editor.fx.0.x=600
-editor.fx.0.y=53
+editor.fx.0.x=584
+editor.fx.0.y=23
 objectbench.height=264
 objectbench.width=461
 package.divider.horizontal=0.6
 package.divider.vertical=0.5
 package.editor.height=264
 package.editor.width=682
-package.editor.x=17
+package.editor.x=627
 package.editor.y=69
 package.frame.height=600
 package.frame.width=800
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=3
 package.showExtends=true
 package.showUses=true
