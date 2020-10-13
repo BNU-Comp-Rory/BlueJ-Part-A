@@ -1,3 +1,4 @@
+import java.util.*;
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
@@ -16,17 +17,23 @@
 public class TicketMachine
 {
     private int price;
+    public Coin coin;
     
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
     // Coin enum
-    public int coin;
+    //public int coin;
 
-    private Ticket issuedTicket;
+    private ArrayList<Ticket> issuedTicket;
+    
+    //private Ticket issuedTicket;
     private Ticket aylesburyTicket;
-    private Ticket amershamTicket;
-    private Ticket highWycombeTicket;
+
+   
+    public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);  
+    // public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
+    // public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycomb", 330);
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -36,19 +43,36 @@ public class TicketMachine
         balance = 0;
         total = 0;
         
+        issuedTicket = new ArrayList<Ticket>();
+        
         aylesburyTicket = new Ticket("Aylesbury",220);
-        amershamTicket = new Ticket("Amersham",300);
-        highWycombeTicket = new Ticket("High Wycombe",330);
-        issuedTicket = null;
+        //amershamTicket = new Ticket("Amersham",300);
+        //highWycombeTicket = new Ticket("High Wycombe",330);
+        //issuedTicket = null;
+        
+    }
+    
+    public void insertCoin(Coin coin)
+    {
+        balance = balance + coin.getValue();
     }
 
+    
     /**
-     * @Return The price of a ticket.
+     * 
+     * 
      */
-    public int getPrice()
+    public void createAylesbury()
     {
-        return price;
+        Ticket Aylesbury = AYLESBURY_TICKET;
     }
+    // /**
+     // * @Return The price of a ticket.
+     // */
+    // public int getPrice()
+    // {
+        // return price;
+    // }
 
     /**
      * Return The amount of money already inserted for the
@@ -88,10 +112,11 @@ public class TicketMachine
             // Simulate the printing of a ticket.
             System.out.println(issuedTicket);
             
-            //for(Ticket issuedTicket : Ticket)
-            //{
-            //    Ticket.print();
-            //}
+            for (int i = 0; i <issuedTicket.size(); i++)//(Ticket tickets : issuedTicket)
+            {
+               System.out.print(issuedTicket.get(i));
+               //issuedTicket.printTicket();
+            }
             
             // Update the total collected with the price.
             total = total + price;
@@ -106,29 +131,34 @@ public class TicketMachine
         }
     }
     
-    /**
-     * Selects the ticket for Aylesbury
-     */
-    public void selectAylesbury()
-    {
-        issuedTicket = aylesburyTicket;
-    }    
+    // /**
+     // * Selects the ticket for Aylesbury
+     // */
+    // public void selectAylesbury()
+    // {
+        // issuedTicket = aylesburyTicket;
+    // }  
     
-    /**
-     * Selects the ticket for Amersham
-     */
-    public void selectAmersham()
-    {
-        issuedTicket = amershamTicket;
-    }  
+    // public void print()
+    // {
+        // AYLESBURY_TICKET.print();
+    // }
     
-    /**
-     * Selects the ticket for High Wycombe
-     */
-    public void selectHighWycombe()
-    {
-        issuedTicket = highWycombeTicket;
-    }  
+    // /**
+     // * Selects the ticket for Amersham
+     // */
+    // public void selectAmersham()
+    // {
+        // issuedTicket = amershamTicket;
+    // }  
+    
+    // /**
+     // * Selects the ticket for High Wycombe
+     // */
+    // public void selectHighWycombe()
+    // {
+        // issuedTicket = highWycombeTicket;
+    // }  
     
     /**
      * Return the money in the balance.
