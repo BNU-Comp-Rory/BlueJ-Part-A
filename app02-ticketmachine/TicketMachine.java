@@ -11,18 +11,22 @@
  * 
  * @ Modified Rory Guilfoyle
  * @ Modified 07.10.2020
+ * @ Modified 13.10.2020
  */
 public class TicketMachine
 {
-    // The price of a ticket from this machine.
     private int price;
-    // The amount of money entered by a customer so far.
+    
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
     // Coin enum
     public int coin;
 
+    private Ticket issuedTicket;
+    private Ticket aylesburyTicket;
+    private Ticket amershamTicket;
+    private Ticket highWycombeTicket;
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -31,6 +35,11 @@ public class TicketMachine
         price = cost;
         balance = 0;
         total = 0;
+        
+        aylesburyTicket = new Ticket("Aylesbury",220);
+        amershamTicket = new Ticket("Amersham",300);
+        highWycombeTicket = new Ticket("High Wycombe",330);
+        issuedTicket = null;
     }
 
     /**
@@ -77,13 +86,13 @@ public class TicketMachine
         if(balance >= price) 
         {
             // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
-            System.out.println("##################");
-            System.out.println();
-
+            System.out.println(issuedTicket);
+            
+            //for(Ticket issuedTicket : Ticket)
+            //{
+            //    Ticket.print();
+            //}
+            
             // Update the total collected with the price.
             total = total + price;
             // Reduce the balance by the price.
@@ -96,7 +105,31 @@ public class TicketMachine
                     
         }
     }
-
+    
+    /**
+     * Selects the ticket for Aylesbury
+     */
+    public void selectAylesbury()
+    {
+        issuedTicket = aylesburyTicket;
+    }    
+    
+    /**
+     * Selects the ticket for Amersham
+     */
+    public void selectAmersham()
+    {
+        issuedTicket = amershamTicket;
+    }  
+    
+    /**
+     * Selects the ticket for High Wycombe
+     */
+    public void selectHighWycombe()
+    {
+        issuedTicket = highWycombeTicket;
+    }  
+    
     /**
      * Return the money in the balance.
      * The balance is cleared.
