@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Date;
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
@@ -16,6 +17,9 @@ import java.util.*;
  */
 public class TicketMachine
 {
+    private Date issueDateTime;
+    private Ticket issuedTicket;
+    
     private int price;
     public Coin coin;
     
@@ -24,28 +28,24 @@ public class TicketMachine
     private int total;
     // Coin enum
     //public int coin;
-
-    private ArrayList<Ticket> issuedTicket;
     
     //private Ticket issuedTicket;
     private Ticket aylesburyTicket;
 
    
-    public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);  
-    // public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
-    // public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycomb", 330);
+    // public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);  
+    //public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
+    //public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycomb", 330);
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        price = cost;
         balance = 0;
         total = 0;
+       
         
-        issuedTicket = new ArrayList<Ticket>();
-        
-        aylesburyTicket = new Ticket("Aylesbury",220);
+        // aylesburyTicket = new Ticket("Aylesbury",220);
         //amershamTicket = new Ticket("Amersham",300);
         //highWycombeTicket = new Ticket("High Wycombe",330);
         //issuedTicket = null;
@@ -64,7 +64,7 @@ public class TicketMachine
      */
     public void createAylesbury()
     {
-        Ticket Aylesbury = AYLESBURY_TICKET;
+        // Ticket Aylesbury = AYLESBURY_TICKET;
     }
     // /**
      // * @Return The price of a ticket.
@@ -112,11 +112,11 @@ public class TicketMachine
             // Simulate the printing of a ticket.
             System.out.println(issuedTicket);
             
-            for (int i = 0; i <issuedTicket.size(); i++)//(Ticket tickets : issuedTicket)
-            {
-               System.out.print(issuedTicket.get(i));
-               //issuedTicket.printTicket();
-            }
+            // for (int i = 0; i <issuedTicket.size(); i++)//(Ticket tickets : issuedTicket)
+            // {
+               // System.out.print(issuedTicket.get(i));
+               // //issuedTicket.printTicket();
+            // }
             
             // Update the total collected with the price.
             total = total + price;
