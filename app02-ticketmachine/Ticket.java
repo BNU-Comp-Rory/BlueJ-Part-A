@@ -10,33 +10,42 @@ import java.util.Date;
 public class Ticket
 {
   // Attributes
-    
-  // public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);  
-  // public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
-  // public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycomb", 330);
+  private String destination;
+  private int price;
+  private Date issueDateTime;
   
   /**
    *  
    * 
    */
-  public Ticket()
+  public Ticket(String destination , int price)
   {      
-    
+    this.destination = destination;
+    this.price = price;
+    issueDateTime = new Date ();
   }
     
-  // /**
-  // *Print method for the Ticket.
-  // *It will display the Destination, Price and Date Issued.
-  // */
-  // public void printTicket()
-  // {   
-     // System.out.println("################");
-     // System.out.println("     Ticket     ");
-     // System.out.println("Destination : " + destination);
-     // System.out.println("Price : " + price);
-     // System.out.println("Date Issued : " + issueDateTime);
-     // System.out.println("################");
-  // }   
+  /**
+   * 
+   */
+  public int getPrice()
+  {
+      return price;
+  }    
+  
+  /**
+  *Print method for the Ticket.
+  *It will display the Destination, Price and Date Issued.
+  */
+  public void printTicket()
+  {   
+     System.out.println("################");
+     System.out.println("     Ticket     ");
+     System.out.println("Destination : " + destination);
+     System.out.println("Price : " + price);
+     System.out.println("Date Issued : " + issueDateTime);
+     System.out.println("################");
+  }   
   
 }
 
