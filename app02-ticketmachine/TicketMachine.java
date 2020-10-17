@@ -17,19 +17,16 @@ import java.util.Date;
  */
 public class TicketMachine
 {
-  
     public Coin coin;
     private int balance;
-    // The total amount of money collected by this machine.
     private int total;
-    //private Ticket issuedTicket;
     private Ticket issuedTicket;
    
     public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);  
     public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
     public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 330);
     /**
-     * Create a machine that issues tickets of the given price.
+     * Create a machine that issues tickets, holds the balance.
      */
     public TicketMachine()
     {
@@ -37,14 +34,16 @@ public class TicketMachine
         total = 0;
     }
     
+    /**
+     * Allows the Ticket Machine to use the enum Coin class.
+     */
     public void insertCoin(Coin coin)
     {
         balance = balance + coin.getValue();
     }
 
     /**
-     * 
-     * 
+     * Selects the Aylesbury ticket as the issued ticket for printing.
      */
     public void selectAylesbury()
     {
@@ -52,8 +51,7 @@ public class TicketMachine
     }
     
     /**
-     * 
-     * 
+     * Selects the Amersham ticket as the issued ticket for printing.
      */
     public void selectAmersham()
     {
@@ -61,8 +59,7 @@ public class TicketMachine
     }
     
     /**
-     * 
-     * 
+     * Selects the High Wycombe ticket and the issued ticket for printing.
      */
     public void selectHighWycombe()
     {
@@ -70,14 +67,12 @@ public class TicketMachine
     }
 
     /**
-     * Return The amount of money already inserted for the
-     * next ticket.
+     * Returns the amount of money already inserted into the machine.
      */
     public int getBalance()
     {
         return balance;
     }
-
 
     /**
      * Print a ticket if enough money has been inserted, and
@@ -88,7 +83,6 @@ public class TicketMachine
     {
         if(balance >= issuedTicket.getPrice()) 
         {
-            // Simulate the printing of a ticket.
             System.out.println();
             issuedTicket.printTicket();
             // Reduce the balance by the price.
@@ -97,7 +91,7 @@ public class TicketMachine
         else 
         {
             System.out.println("You must insert at least: " +
-                               ( issuedTicket.getPrice()- balance) + " more cents.");
+                ( issuedTicket.getPrice()- balance) + " more pennies.");
                     
         }
     }

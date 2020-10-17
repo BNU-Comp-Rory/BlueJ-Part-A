@@ -1,6 +1,10 @@
 
 /**
- * Enumeration class Coin - write a description of the enum class here
+ * Present coin values for Ticket Machine
+ * 10p
+ * 20p
+ * 100p - £1
+ * 200p - £2
  * 
  * @ Author  Rory Guilfoyle
  * @ Version 07.10.2020
