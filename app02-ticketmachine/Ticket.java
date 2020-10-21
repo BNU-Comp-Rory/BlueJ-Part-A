@@ -11,8 +11,11 @@ import java.util.Date;
  */
 public class Ticket
 {
+  // Sets the destination as a string input for the constants
   private String destination;
+  // Sets the price to an int for the constants
   private int price;
+  // Sets the date and time of the current system
   private Date issueDateTime;
   
   /**

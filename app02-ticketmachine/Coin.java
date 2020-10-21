@@ -8,6 +8,7 @@
  * 
  * @ Author  Rory Guilfoyle
  * @ Version 07.10.2020
+ * @ Modified 21.10.2020
  */
 public enum Coin
 {
@@ -18,11 +19,17 @@ public enum Coin
     
     private final int value;
     
+    /**
+     * Assigns the final value to value
+     */
     private Coin(int value)
     {
         this.value = value;
     }
     
+    /**
+     * return the Value of the coin
+     */
     public int getValue()
     {
         return value;

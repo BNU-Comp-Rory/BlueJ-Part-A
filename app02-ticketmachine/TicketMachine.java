@@ -17,14 +17,20 @@ import java.util.Date;
  */
 public class TicketMachine
 {
+    // Uses enum coin class for value
     public Coin coin;
+    // Balance stored in machine
     private int balance;
+    // Total cost of the ticket
     private int total;
+    // Assigns the selected ticket as the issued ticket
     private Ticket issuedTicket;
-   
+    
+    // Constants used for destination and cost of tickets
     public static final Ticket AYLESBURY_TICKET = new Ticket("Aylesbury", 220);  
     public static final Ticket AMERSHAM_TICKET = new Ticket("Amersham", 300);
     public static final Ticket HIGHWYCOMBE_TICKET = new Ticket("High Wycombe", 330);
+    
     /**
      * Create a machine that issues tickets, holds the balance.
      */
