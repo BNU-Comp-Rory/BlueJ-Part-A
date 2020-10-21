@@ -1,0 +1,51 @@
+TicketMachine London = new TicketMachine();
+
+London.insertCoin(Coin.P20);
+London.insertCoin(Coin.P10);
+London.insertCoin(Coin.P100);
+London.insertCoin(Coin.P200);
+
+London.getBalance()
+    returned int 330
+
+London.selectAmersham();
+London.printTicket();
+
+################
+     Ticket
+Destination : Amersham
+Price : 300
+Date Issued : Wed Oct 21 09:29:02 BST 2020
+################
+
+London.selectHighWycombe();
+London.printTicket();
+You must insert at least: 300 more pennies.
+
+London.insertCoin(Coin.P200);
+London.insertCoin(Coin.P200);
+
+London.printTicket();
+
+################
+     Ticket
+Destination : High Wycombe
+Price : 330
+Date Issued : Wed Oct 21 09:29:02 BST 2020
+################
+London.selectAylesbury();
+London.insertCoin(Coin.P200);
+London.printTicket();
+
+################
+     Ticket
+Destination : Aylesbury
+Price : 220
+Date Issued : Wed Oct 21 09:29:02 BST 2020
+################
+
+London.getBalance()
+    returned int 80
+    
+London.refundBalance()
+    returned int 80
