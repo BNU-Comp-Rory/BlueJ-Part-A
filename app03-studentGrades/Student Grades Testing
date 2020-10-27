@@ -1,0 +1,30 @@
+Course indieGamesDev = new Course("Indie Games Dev", "00592");
+
+Student rory = new Student("Rory", "22027796");
+
+rory.enrolOnCourse(indieGamesDev);
+
+indieGamesDev.createModule();
+
+indieGamesDev.printModules();
+Module: CO452 Programming Concepts, Mark = -1
+Module: CO462 Maths for Games, Mark = -1
+Module: CO411 Concept Visualisation, Mark = -1
+Module: CO412 Game Design Theory, Mark = -1
+
+indieGamesDev.addMark(80, 1);
+indieGamesDev.addMark(100, 2);
+indieGamesDev.addMark(70, 3);
+indieGamesDev.addMark(85, 4);
+
+indieGamesDev.coursePassed()
+    returned boolean true
+
+indieGamesDev.calculateFinalMark();
+Final Grade: A
+
+indieGamesDev.printModules();
+Module: CO452 Programming Concepts, Mark = 80
+Module: CO462 Maths for Games, Mark = 100
+Module: CO411 Concept Visualisation, Mark = 70
+Module: CO412 Game Design Theory, Mark = 85
