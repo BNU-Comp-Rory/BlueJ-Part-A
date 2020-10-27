@@ -6,46 +6,54 @@
  * @author Derek Peacock
  * @version 0.1 11/Sep/2020
  *
- * Modified by Rory Guilfoyle
- * 26.10.2020
+ * @ Modified by Rory Guilfoyle
+ * @ 26.10.2020
+ * 
+ * @ 27.10.2020
  */
 public class Course
 {
-    // instance variables - replace the example below with your own
+    // Code number for the course
     private String codeNo;
+    // Title for the course
     private String title;
-
+    // Modules for the course
     private Module module1;
     private Module module2;
     private Module module3;
-    private Module module4;
-    
+    private Module module4;  
+    // Final mark for the course
     private int finalMark;
-        
+    // Final Grade for the course
     private Grades finalGrade;
+    // T/F if the course is passed
     public boolean coursePassed;
         
     /**
-     * Constructor for objects of class Course
+     * Creates a course which requires Title and Code No.
      */
     public Course(String title, String codeNo)
     {
-        // initialise instance variables
-        this.title = title;
-        this.codeNo = codeNo;
-        this.finalMark = 0;
-        this.finalGrade = null;
-        createModule();
+      this.title = title;
+      this.codeNo = codeNo;
+      this.finalMark = 0;
+      this.finalGrade = null;
     }
 
+    /**
+     * Creates the modules, predefined information
+     */
     public void createModule()
     {
-        module1 = new Module("Programming Concepts", "CO452");
-        module2 = new Module("Maths for Games", "CO462");
-        module3 = new Module("Concept Visualisation", "CO411");
-        module4 = new Module("Game Design Theory", "CO412");
+      module1 = new Module("Programming Concepts", "CO452");
+      module2 = new Module("Maths for Games", "CO462");
+      module3 = new Module("Concept Visualisation", "CO411");
+      module4 = new Module("Game Design Theory", "CO412");
     }
     
+    /**
+     * Award a mark for the module
+     */
     public void addMark(int mark, int moduleNo)
     {
         if(moduleNo == 1)
@@ -75,12 +83,13 @@ public class Course
      */
     public void print()
     {
-        // put your code here
-        System.out.println("Course " + codeNo + " - " + title);
-        
-        System.out.println("Final Mark = " + finalMark);
+      System.out.println("Course " + codeNo + " - " + title); 
+      System.out.println("Final Mark = " + finalMark);
     }
     
+    /**
+     * Converts the mark into a lettered grade
+     */
     private Grades convertToGrade(int mark)
     {
         if((mark >= 0) && (mark < 40))        
@@ -109,6 +118,9 @@ public class Course
         }
     }
     
+    /**
+     * Calculates the final grade by adding all modules together then deviding by 4.
+     */
     public void calculateFinalMark()
     {
        if(coursePassed()==true)
@@ -125,6 +137,9 @@ public class Course
        }
     }
     
+    /**
+     * Checks to see if the modules have been passed
+     */
     public boolean coursePassed()
     {
         if((((module1.isPassed()) && module2.isPassed()) 
@@ -135,6 +150,9 @@ public class Course
             else return false;
     }
     
+    /**
+     * Prints the module information
+     */
     public void printModules()
     { 
       module1.print();
