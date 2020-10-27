@@ -44,7 +44,7 @@ public class Module
    public void print()
    {
       System.out.println("Module: " + codeNo +
-          " " + title + " Mark = " + mark);
+          " " + title + ", Mark = " + mark);
    }
 
    public int getMark()

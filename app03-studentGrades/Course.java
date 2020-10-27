@@ -52,6 +52,22 @@ public class Course
         {
             module1.awardMark(mark);
         }
+        else if (moduleNo ==2)
+        {
+            module2.awardMark(mark);
+        }
+        else if(moduleNo == 3)
+        {
+            module3.awardMark(mark);
+        }
+        else if (moduleNo ==4)
+        {
+            module4.awardMark(mark);
+        }
+        else 
+        {
+          System.out.println ("The module is not assigned to this course");
+        }
     }
     
     /**
@@ -65,37 +81,47 @@ public class Course
         System.out.println("Final Mark = " + finalMark);
     }
     
-    public void setMark(int mark,String codeNo) 
+    private Grades convertToGrade(int mark)
     {
-      if(module1.getCodeNo() == codeNo)
-      {
-          module1.awardMark(mark);
-      }
-    }
-    
-    public Grades convertToGrade(int mark)
-    {
-        if((mark >= 0) && (mark < 39))
-        
+        if((mark >= 0) && (mark < 40))        
         {
             return Grades.F;
         } 
+        else if ((mark >=40) && (mark <50))
+        {
+            return Grades.D;
+        }
+        else if ((mark >=50) && (mark <60))
+        {
+            return Grades.C;
+        }
+        else if ((mark >=60) && (mark <70))
+        {
+            return Grades.B;
+        }
+        else if ((mark >=70) && (mark <=100))
+        {
+            return Grades.A;
+        }
+        else
+        {
         return Grades.X;
+        }
     }
     
     public void calculateFinalMark()
     {
-       if(coursePassed)
+       if(coursePassed()==true)
        {
          int totalMark = module1.getMark() + module2.getMark() +
           module3.getMark() + module4.getMark();
            
          finalMark = totalMark / 4;
-         print();
+         System.out.println("Final Grade: " + convertToGrade(finalMark));
        }
        else
        {
-       
+         System.out.println ("Cannot calculate final grade");
        }
     }
     
@@ -110,10 +136,10 @@ public class Course
     }
     
     public void printModules()
-    {
-        if (coursePassed)
-        {
-            System.out.println("final Mark = " + finalMark);
-        }
+    { 
+      module1.print();
+      module2.print();
+      module3.print();
+      module4.print();
     }
 }
