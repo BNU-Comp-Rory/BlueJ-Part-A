@@ -5,6 +5,9 @@
  * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
+ * 
+ * @ Modified Rory Guilfoyle
+ * @ 28.10.2020
  */
 public class StockDemo
 {
@@ -18,9 +21,16 @@ public class StockDemo
     public StockDemo()
     {
         manager = new StockManager();
-        manager.addProduct(new Product(132, "Clock Radio"));
-        manager.addProduct(new Product(37,  "Mobile Phone"));
-        manager.addProduct(new Product(23,  "Microwave Oven"));
+        manager.addProduct(new Product(100, ""));
+        manager.addProduct(new Product(101,  ""));
+        manager.addProduct(new Product(102,  ""));
+        manager.addProduct(new Product(103, ""));
+        manager.addProduct(new Product(104,  ""));
+        manager.addProduct(new Product(105,  ""));
+        manager.addProduct(new Product(106, ""));
+        manager.addProduct(new Product(107,  ""));
+        manager.addProduct(new Product(108,  ""));
+        manager.addProduct(new Product(109, ""));
     }
     
     /**
