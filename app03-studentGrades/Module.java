@@ -78,6 +78,6 @@ public class Module
      */
    public boolean isPassed()
    {
-     return mark >=0;  
+     return mark >=40;  
    }
 }
