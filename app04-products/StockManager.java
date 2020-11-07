@@ -11,6 +11,7 @@ public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    private boolean validate;
 
     /**
      * Initialise the stock manager.
@@ -47,6 +48,30 @@ public class StockManager
         System.out.println("Product ID " + id + " not found!");
     }
     
+    public void search(String name)
+    {
+        validate = false;
+        for(Product product : stock)
+        {
+            if(product.getName().equals(name))
+            {
+                System.out.println(product);
+                validate = true;
+            }
+            
+        }
+        validate();
+    }
+    
+    private void validate()
+    {
+        if(validate != true)
+        {
+            System.out.println("Product not found!");
+            
+        }
+    }
+    
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
@@ -63,6 +88,54 @@ public class StockManager
         }
         
         return null;
+    }
+    
+    public void sellMultiple(int id, int amount)
+    {
+        Product product = findProduct(id);
+        if (product != null)
+        {
+            product.sell(amount);
+            System.out.println("Product Sold : " + product.getName() + 
+            " Amount sold : " + amount);
+        }
+    }
+    
+    public void renameProduct(int id, String newName)
+    {
+        Product product = findProduct(id);
+        if (product != null)
+        {
+            System.out.println("Product: " + product.getName());
+            product.renameProduct(newName);
+            System.out.println("Product Renamed to : " + product.getName());
+        }
+    }
+    
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        if (product != null)
+        {
+            System.out.println("Product Removed: " + product.toString());
+            stock.remove(product);
+        }
+        else
+        System.out.println ("Product not found");
+        
+    }
+    
+    public void checkLowStock()
+    {
+        int low = 5;
+        for (Product product : stock)
+        {
+          if (product.getQuantity() <= low)
+          {
+            System.out.println(product.toString());
+          }
+        }
+        
     }
     
     /**
@@ -84,7 +157,7 @@ public class StockManager
     {
         for (Product product : stock)
         {
-            System.out.println(product);
+            System.out.println(product.toString());
         }
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -14,6 +16,7 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
+    private Random generator;
 
     /**
      * Create a StockManager and populate it with a few
@@ -21,7 +24,8 @@ public class StockDemo
      */
     public StockDemo(StockManager manager)
     {
-        manager = new StockManager();
+        this.manager = manager;
+        generator = new Random();
         manager.addProduct(new Product(100, "Milk"));
         manager.addProduct(new Product(101, "Bread"));
         manager.addProduct(new Product(102, "Bacon"));
@@ -41,9 +45,45 @@ public class StockDemo
      */
     public void runDemo()
     {
+        System.out.println ("This is the stock for Rory's Shop");
+        System.out.println ();
         // Show details of all of the products.
         manager.printProductDetails();
+        print("Delivery");
+        deliverProducts();
+        print ("Sell");
+        sellProducts();
     }
+    
+    private void deliverProducts()
+    {
+        int amount = 0;
+        
+        for (int id = 100; id <= 109; id++)
+        {
+            amount = generator.nextInt(20) + 5;
+            manager.delivery(id,amount);
+        }
+    }
+    
+    private void sellProducts()
+    {
+        int amount = 0;
+        
+        for (int id = 100; id <= 109; id++)
+        {
+            amount = generator.nextInt(8) + 1;
+            manager.sellMultiple(id,amount);
+        }
+    }
+    
+    private void print(String spacer)
+    {
+        System.out.println ();
+        System.out.println ("Demonstrating: " + spacer);
+        System.out.println ();
+    }
+    
     
     // /**
      // * Show details of the given product. If found,

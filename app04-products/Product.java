@@ -79,6 +79,11 @@ public class Product
                                " with a non-positive amount: " + amount);
         }
     }
+    
+    public void renameProduct(String newName)
+    {
+        this.name = newName;   
+    }
 
     /**
      * Sell one of these products.
@@ -94,6 +99,24 @@ public class Product
         {
             System.out.println(
                 "Attempt to sell an out of stock item: " + name);
+        }
+    }
+    
+    public void sell(int amount)
+    {
+        if(quantity > amount) 
+        {
+            quantity -= amount;
+        }
+        else if(quantity < amount)
+        {
+            System.out.println(
+                "Not enough : " + name + " in stock.");
+        }
+        else
+        {
+            System.out.println(
+            "Amount needs to be positive");
         }
     }
 }
