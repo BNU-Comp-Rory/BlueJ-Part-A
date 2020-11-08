@@ -6,6 +6,8 @@
  * 
  * @ Modified Rory Guilfoyle
  * @ 28.10.2020
+ * @ 03.11.2020
+ * @ 08.11.2020
  */
 public class Product
 {
@@ -80,6 +82,9 @@ public class Product
         }
     }
     
+    /**
+     * Rename a product 
+     */
     public void renameProduct(String newName)
     {
         this.name = newName;   
@@ -102,6 +107,9 @@ public class Product
         }
     }
     
+    /** 
+     * Sell a single product
+     */
     public void sell(int amount)
     {
         if(quantity > amount) 

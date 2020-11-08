@@ -11,21 +11,24 @@ import java.util.Random;
  * @ Modified Rory Guilfoyle
  * @ 28.10.2020
  * @ 03.11.2020
+ * @ 08.11.2020
  */
 public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
+    // Generates a random number for deilvery and sales examples
     private Random generator;
 
     /**
-     * Create a StockManager and populate it with a few
+     * Creates a StockManager and populates it with a few
      * sample products.
      */
     public StockDemo(StockManager manager)
     {
         this.manager = manager;
         generator = new Random();
+        
         manager.addProduct(new Product(100, "Milk"));
         manager.addProduct(new Product(101, "Bread"));
         manager.addProduct(new Product(102, "Bacon"));
@@ -47,7 +50,6 @@ public class StockDemo
     {
         System.out.println ("This is the stock for Rory's Shop");
         System.out.println ();
-        // Show details of all of the products.
         manager.printProductDetails();
         print("Delivery");
         deliverProducts();
@@ -55,6 +57,10 @@ public class StockDemo
         sellProducts();
     }
     
+    /**
+     * Deliver a random amount of products to the store.
+     * 20 max and 5 min delivery.
+     */
     private void deliverProducts()
     {
         int amount = 0;
@@ -66,6 +72,10 @@ public class StockDemo
         }
     }
     
+    /**
+     * Sell random products from the store.
+     * 8 max and 1 min sold
+     */
     private void sellProducts()
     {
         int amount = 0;
@@ -77,61 +87,13 @@ public class StockDemo
         }
     }
     
+    /**
+     * Creates a space for aesthetic printing.
+     */
     private void print(String spacer)
     {
         System.out.println ();
         System.out.println ("Demonstrating: " + spacer);
         System.out.println ();
     }
-    
-    
-    // /**
-     // * Show details of the given product. If found,
-     // * its name and stock quantity will be shown.
-     // * @param id The ID of the product to look for.
-     // */
-    // public void showDetails(int id)
-    // {
-        // Product product = getProduct(id);
-        
-        // if(product != null) 
-        // {
-            // System.out.println(product.toString());
-        // }
-    // }
-    
-    // /**
-     // * Sell one of the given item.
-     // * Show the before and after status of the product.
-     // * @param id The ID of the product being sold.
-     // */
-    // public void sellProduct(int id)
-    // {
-        // Product product = getProduct(id);
-        
-        // if(product != null) 
-        // {
-            // showDetails(id);
-            // product.sellOne();
-            // showDetails(id);
-        // }
-    // }
-    
-    // /**
-     // * Get the product with the given id from the manager.
-     // * An error message is printed if there is no match.
-     // * @param id The ID of the product.
-     // * @return The Product, or null if no matching one is found.
-     // */
-    // public Product getProduct(int id)
-    // {
-        // Product product = manager.findProduct(id);
-        
-        // if(product == null) 
-        // {
-            // System.out.println("Product with ID: " + id +
-                               // " is not recognised.");
-        // }
-        // return product;
-    // }
 }

@@ -6,11 +6,16 @@ import java.util.ArrayList;
  * 
  * @ Author Rory Guilfoyle 
  * @ 28.10.2020
+ * 
+ * @ Modified
+ * @ 03.11.2020
+ * @ 08.11.2020
  */
 public class StockManager
 {
-    // A list of the products.
+    // An array list of the products.
     private ArrayList<Product> stock;
+    // True or false if the stock exists to modify
     private boolean validate;
 
     /**
@@ -48,6 +53,9 @@ public class StockManager
         System.out.println("Product ID " + id + " not found!");
     }
     
+    /**
+     * Search the products using name
+     */
     public void search(String name)
     {
         validate = false;
@@ -63,6 +71,9 @@ public class StockManager
         validate();
     }
     
+    /**
+     * Validate if products are true or false
+     */
     private void validate()
     {
         if(validate != true)
@@ -90,6 +101,9 @@ public class StockManager
         return null;
     }
     
+    /**
+     * Sell a product individually and specify the amount.
+     */
     public void sellMultiple(int id, int amount)
     {
         Product product = findProduct(id);
@@ -101,6 +115,9 @@ public class StockManager
         }
     }
     
+    /**
+     * Rename the product.
+     */
     public void renameProduct(int id, String newName)
     {
         Product product = findProduct(id);
@@ -112,6 +129,9 @@ public class StockManager
         }
     }
     
+    /**
+     *  Remove a product
+     */
     public void removeProduct(int id)
     {
         Product product = findProduct(id);
@@ -125,6 +145,9 @@ public class StockManager
         
     }
     
+    /**
+     * Check if the stock of any product is below 5 and print result. 
+     */
     public void checkLowStock()
     {
         int low = 5;
@@ -137,21 +160,9 @@ public class StockManager
         }
         
     }
-    
-    /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
-     * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
-     */
-    public int numberInStock(int id)
-    {
-        return 0;
-    }
 
     /**
-     * Print details of all the products.
+     * Print details of all the products and stock level.
      */
     public void printProductDetails()
     {

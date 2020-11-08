@@ -1,0 +1,97 @@
+StockManager stockManager = new StockManager();
+StockDemo stockDem1 = new StockDemo(stockManager);
+
+stockDem1.runDemo();
+This is the stock for Rory's Shop
+
+100: Milk stock level: 0
+101: Bread stock level: 0
+102: Bacon stock level: 0
+103: Sausage stock level: 0
+104: Beans stock level: 0
+105: Eggs stock level: 0
+106: Butter stock level: 0
+107: Flour stock level: 0
+108: Tomatoes stock level: 0
+109: Pizza stock level: 0
+
+Demonstrating: Delivery
+
+Product Delivered : 100: Milk stock level: 19
+Product Delivered : 101: Bread stock level: 20
+Product Delivered : 102: Bacon stock level: 18
+Product Delivered : 103: Sausage stock level: 20
+Product Delivered : 104: Beans stock level: 16
+Product Delivered : 105: Eggs stock level: 11
+Product Delivered : 106: Butter stock level: 23
+Product Delivered : 107: Flour stock level: 13
+Product Delivered : 108: Tomatoes stock level: 15
+Product Delivered : 109: Pizza stock level: 10
+
+Demonstrating: Sell
+
+Product Sold : Milk Amount sold : 7
+Product Sold : Bread Amount sold : 5
+Product Sold : Bacon Amount sold : 4
+Product Sold : Sausage Amount sold : 3
+Product Sold : Beans Amount sold : 6
+Product Sold : Eggs Amount sold : 8
+Product Sold : Butter Amount sold : 6
+Product Sold : Flour Amount sold : 4
+Product Sold : Tomatoes Amount sold : 7
+Product Sold : Pizza Amount sold : 7
+
+stockManager.checkLowStock();
+105: Eggs stock level: 3
+109: Pizza stock level: 3
+
+stockManager.delivery(105, 6);
+Product Delivered : 105: Eggs stock level: 9
+
+Product product1 = new Product(110, "Pasta");
+stockManager.addProduct(product1);
+
+stockManager.checkLowStock();
+109: Pizza stock level: 3
+110: Pasta stock level: 0
+
+stockManager.findProduct(106)
+    returned Object <object reference>
+
+stockManager.printProductDetails();
+100: Milk stock level: 12
+101: Bread stock level: 15
+102: Bacon stock level: 14
+103: Sausage stock level: 17
+104: Beans stock level: 10
+105: Eggs stock level: 9
+106: Butter stock level: 17
+107: Flour stock level: 9
+108: Tomatoes stock level: 8
+109: Pizza stock level: 3
+110: Pasta stock level: 0
+
+stockManager.removeProduct(110);
+Product Removed: 110: Pasta stock level: 0
+
+stockManager.renameProduct(109, "Fish");
+Product: Pizza
+Product Renamed to : Fish
+
+stockManager.search("Eggs");
+105: Eggs stock level: 9
+
+stockManager.sellMultiple(105, 7);
+Product Sold : Eggs Amount sold : 7
+
+stockManager.printProductDetails();
+100: Milk stock level: 12
+101: Bread stock level: 15
+102: Bacon stock level: 14
+103: Sausage stock level: 17
+104: Beans stock level: 10
+105: Eggs stock level: 2
+106: Butter stock level: 17
+107: Flour stock level: 9
+108: Tomatoes stock level: 8
+109: Fish stock level: 3
