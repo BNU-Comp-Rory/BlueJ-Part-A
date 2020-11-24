@@ -41,7 +41,7 @@ public class StockApp
            
             String choice = input.getString().toLowerCase();
             
-            if(choice.equals("QUIT"))
+            if(choice.equals(QUIT))
                 finished = true;
             else
                 executeMenuChoice(choice);
