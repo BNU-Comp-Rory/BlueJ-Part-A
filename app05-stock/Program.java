@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Program here.
+ * This class will open up a UI to be able to use Stock Management.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @ Rory Guilfoyle
+ * @ 24.11.20202
  */
 public class Program
 {
