@@ -25,8 +25,7 @@ public class StockApp
      */
     public void run()
     {
-        printHeading();
-        getMenuChoice();
+       getMenuChoice();
     }
     
     /**
@@ -67,7 +66,7 @@ public class StockApp
     {
         System.out.println("******************************");
         System.out.println(" Stock Management Application ");
-        System.out.println("    App05: by Student Name");
+        System.out.println("    App05: by Rory Guilfoyle");
         System.out.println("******************************");
     }
 }
