@@ -36,6 +36,14 @@ public class StockManager
     }
     
     /**
+     * 
+     */
+    public void removeProduct (Product item)
+    {
+        stock.remove(item);
+    }
+    
+    /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
      * @param id The ID of the product.
@@ -171,4 +179,5 @@ public class StockManager
             System.out.println(product.toString());
         }
     }
+    
 }

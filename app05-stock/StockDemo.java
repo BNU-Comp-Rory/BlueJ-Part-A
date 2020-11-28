@@ -61,7 +61,7 @@ public class StockDemo
      * Deliver a random amount of products to the store.
      * 20 max and 5 min delivery.
      */
-    private void deliverProducts()
+    public void deliverProducts()
     {
         int amount = 0;
         
