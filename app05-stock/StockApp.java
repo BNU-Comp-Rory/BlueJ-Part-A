@@ -89,10 +89,10 @@ public class StockApp
         {
             lowStockPrint();
         }
-        // else if (choice.equals(RE_STOCK))
-        // {
-            // restock();
-        // }
+        else if (choice.equals(RE_STOCK))
+        {
+            restock();
+        }
     }
     
     /**
@@ -229,14 +229,14 @@ public class StockApp
         manager.checkLowStock();
     }
     
-    // /**
-     // * 
-     // */
-    // private void restock()
-    // {
-        // System.out.println("Restocking low stock products\n");
-        
-    // }
+    /**
+     * 
+     */
+    private void restock()
+    {
+        System.out.println("Restocking low stock products\n");
+        demo.deliverProducts();
+    }
     
     /**
      * Print out a menu of operation choices
