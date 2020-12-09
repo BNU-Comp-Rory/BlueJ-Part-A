@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.*;
 
 /**
  * Demonstrate the StockManager and Product classes.
@@ -12,6 +13,7 @@ import java.util.Random;
  * @ 28.10.2020
  * @ 03.11.2020
  * @ 08.11.2020
+ * @ 09.12.2020
  */
 public class StockDemo
 {
@@ -50,9 +52,9 @@ public class StockDemo
     {
         System.out.println ("This is the stock for Rory's Shop");
         System.out.println ();
-        manager.printProductDetails();
+        manager.printProductDetails(manager.getStock());
         print("Delivery");
-        deliverProducts();
+        deliverProducts(manager.getStock());
         print ("Sell");
         sellProducts();
     }
@@ -61,15 +63,14 @@ public class StockDemo
      * Deliver a random amount of products to the store.
      * 20 max and 5 min delivery.
      */
-    public void deliverProducts()
+    public void deliverProducts(ArrayList<Product> list)
     {
-        int amount = 0;
-        
-        for (int id = 100; id <= 109; id++)
+        for (Product product : list)
         {
-            amount = generator.nextInt(20) + 5;
-            manager.delivery(id,amount);
+            int amount = generator.nextInt(20 - 5) + 5;
+            manager.delivery(product.getID(),amount);
         }
+        
     }
     
     /**

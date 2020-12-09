@@ -10,6 +10,7 @@ import java.util.ArrayList;
  * @ Modified
  * @ 03.11.2020
  * @ 08.11.2020
+ * @ 09.12.2020
  */
 public class StockManager
 {
@@ -59,6 +60,15 @@ public class StockManager
         }
         else
         System.out.println("Product ID " + id + " not found!");
+    }
+    
+    /**
+     * 
+     */
+    public ArrayList<Product> getStock()
+    {
+        
+        return stock;
     }
     
     /**
@@ -118,8 +128,7 @@ public class StockManager
         if (product != null)
         {
             product.sell(amount);
-            System.out.println("Product Sold : " + product.getName() + 
-            " Amount sold : " + amount);
+
         }
     }
     
@@ -156,23 +165,28 @@ public class StockManager
     /**
      * Check if the stock of any product is below 5 and print result. 
      */
-    public void checkLowStock()
+    public ArrayList<Product> checkLowStock()
     {
         int low = 5;
+        ArrayList<Product> lowStock = new ArrayList<Product>();
+        
         for (Product product : stock)
         {
           if (product.getQuantity() <= low)
           {
-            System.out.println(product.toString());
+            
+            lowStock.add(product);
+            
+            
           }
         }
-        
+        return lowStock;
     }
 
     /**
      * Print details of all the products and stock level.
      */
-    public void printProductDetails()
+    public void printProductDetails(ArrayList<Product> stock)
     {
         for (Product product : stock)
         {

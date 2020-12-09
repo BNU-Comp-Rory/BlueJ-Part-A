@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * This app provides a user interface to the
@@ -6,6 +7,8 @@
  *
  * @ Rory Guilfoyle
  * @ 24.11.2020
+ * @ Modified
+ * @ 09.12.2020
  */
 public class StockApp
 {   
@@ -66,7 +69,7 @@ public class StockApp
         }
         else if (choice.equals(PRINT_ALL))
         {
-            manager.printProductDetails();
+            manager.printProductDetails(manager.getStock());
             String value = input.getString();
         }
         else if (choice.equals(REMOVE))
@@ -226,7 +229,7 @@ public class StockApp
     private void lowStockPrint()
     {
         System.out.println("The following items are low in stock:\n");
-        manager.checkLowStock();
+        manager.printProductDetails(manager.checkLowStock());
     }
     
     /**
@@ -235,7 +238,7 @@ public class StockApp
     private void restock()
     {
         System.out.println("Restocking low stock products\n");
-        demo.deliverProducts();
+        demo.deliverProducts(manager.checkLowStock());
     }
     
     /**

@@ -8,6 +8,7 @@
  * @ 28.10.2020
  * @ 03.11.2020
  * @ 08.11.2020
+ * @ 09.12.2020
  */
 public class Product
 {
@@ -115,6 +116,8 @@ public class Product
         if(quantity > amount) 
         {
             quantity -= amount;
+            System.out.println("Product Sold : " + name + 
+            " Amount sold : " + amount);
         }
         else if(quantity < amount)
         {
